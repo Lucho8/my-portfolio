@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 👨‍💻 Portfolio Personal - Luciano (Lucho)
 
-## Getting Started
+Bienvenido al repositorio de mi portfolio personal. Este espacio no solo sirve como un currículum interactivo, sino también como una demostración práctica de mis habilidades de desarrollo Frontend usando tecnologías modernas y buenas prácticas.
 
-First, run the development server:
+🔗 https://luciano-fredes-portfolio.vercel.app/
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Sobre este proyecto
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Diseñé y desarrollé esta página desde cero para que sea ultrarrápida, completamente responsiva y fácil de mantener. La arquitectura está pensada para separar la data (los proyectos y experiencias) de los componentes visuales, permitiendo escalar el contenido sin tocar la UI.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### ✨ Características Principales
+* **Performance First:** Carga instantánea aprovechando Server Components de Next.js.
+* **Diseño Responsivo:** Mobile-first, adaptado a cualquier tamaño de pantalla usando Tailwind CSS.
+* **Tipado Estricto:** Código 100% TypeScript para evitar errores en tiempo de ejecución.
+* **Animaciones Fluidas:** Interacciones sutiles para mejorar la experiencia de usuario (UI/UX).
+* **SEO Optimizado:** Metadatos dinámicos y estructura semántica para un mejor posicionamiento.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🛠️ Stack Tecnológico
 
-To learn more about Next.js, take a look at the following resources:
+Este portfolio fue construido utilizando las herramientas con las que me siento más productivo y seguro:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+* **Framework:** Next.js 16 (App Router)
+* **Lenguaje:** TypeScript
+* **Estilado:** Tailwind CSS v4
+* **Iconos:** Lucide React / Radix Icons
+* **Despliegue:** Vercel
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+📬 Contacto
+Si mi perfil encaja con lo que tu equipo está buscando, o simplemente querés hablar de código y arquitectura, no dudes en contactarme:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+LinkedIn: https://www.linkedin.com/in/luciano-gonzalo-fredes-96b786192/
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Email: lucianogonzalofredes@gmail.com
+
+GitHub: https://github.com/Lucho8
+
+Diseñado y desarrollado con ☕ por Luciano.

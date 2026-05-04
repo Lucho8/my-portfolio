@@ -38,6 +38,15 @@ interface Dictionary {
         githubLabel: string;
         githubUrl: string;
       };
+      interviewerAI: {
+        name: string;
+        description: string;
+        tags: string[];
+        demoLabel: string;
+        demoUrl: string;
+        githubLabel: string;
+        githubUrl: string;
+      };
     };
   };
   footer: {
@@ -80,6 +89,22 @@ const translations: Record<Language, Dictionary> = {
           githubLabel: "Código Fuente",
           githubUrl: "https://github.com/Lucho8/TechiesTechstore",
         },
+        interviewerAI: {
+          name: "Interviewer AI",
+          description:
+            "Plataforma SaaS Fullstack para simular entrevistas técnicas con Inteligencia Artificial. Implementa una arquitectura RAG (Retrieval-Augmented Generation) con memoria vectorial (pgvector) permitiendo que la IA recuerde el progreso del candidato. Incluye análisis de CVs en PDF y un dashboard interactivo de métricas.",
+          tags: [
+            "Next.js 16",
+            "RAG & Vector DB",
+            "PostgreSQL",
+            "Prisma",
+            "Clerk Auth",
+          ],
+          demoLabel: "Ver Demo",
+          demoUrl: "https://ai-interview-delta-two.vercel.app/",
+          githubLabel: "Código Fuente",
+          githubUrl: "https://github.com/Lucho8/ai-interview",
+        },
       },
     },
     footer: { madeWith: "Creado con Next.js, Tailwind v4 y mucho café." },
@@ -101,7 +126,7 @@ const translations: Record<Language, Dictionary> = {
         dripStore: {
           name: "DripStore",
           description:
-            "A scalable Fullstack e-commerce platform built with Next.js 15, TypeScript, and PostgreSQL (via Prisma). It features a customer-facing storefront with secure Stripe payment processing, and a comprehensive Admin Dashboard to manage inventory, track orders, and analyze sales metrics.",
+            "A scalable Fullstack e-commerce platform built with Next.js 16, TypeScript, and PostgreSQL (via Prisma). It features a customer-facing storefront with secure Stripe payment processing, and a comprehensive Admin Dashboard to manage inventory, track orders, and analyze sales metrics.",
           tags: ["Next.js 16", "Prisma", "Stripe", "Tailwind"],
           demoLabel: "Live Demo",
           demoUrl: "https://drip-store-rouge.vercel.app/",
@@ -117,6 +142,22 @@ const translations: Record<Language, Dictionary> = {
           demoUrl: "https://techies-techstore.vercel.app/",
           githubLabel: "Source Code",
           githubUrl: "https://github.com/Lucho8/TechiesTechstore",
+        },
+        interviewerAI: {
+          name: "Interviewer AI",
+          description:
+            "A Fullstack SaaS platform for simulating technical interviews using Artificial Intelligence. It implements a RAG (Retrieval-Augmented Generation) architecture with vector memory (pgvector), allowing the AI to remember the candidate's past sessions. Features include PDF resume parsing and an interactive metrics dashboard.",
+          tags: [
+            "Next.js 16",
+            "RAG & Vector DB",
+            "PostgreSQL",
+            "Prisma",
+            "Clerk Auth",
+          ],
+          demoLabel: "Live Demo",
+          demoUrl: "https://ai-interview-delta-two.vercel.app/",
+          githubLabel: "Source Code",
+          githubUrl: "https://github.com/Lucho8/ai-interview",
         },
       },
     },

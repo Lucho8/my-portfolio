@@ -47,6 +47,15 @@ interface Dictionary {
         githubLabel: string;
         githubUrl: string;
       };
+      stockFlow: {
+        name: string;
+        description: string;
+        tags: string[];
+        demoLabel: string;
+        demoUrl: string;
+        githubLabel: string;
+        githubUrl: string;
+      };
     };
   };
   footer: {
@@ -105,6 +114,16 @@ const translations: Record<Language, Dictionary> = {
           githubLabel: "Código Fuente",
           githubUrl: "https://github.com/Lucho8/ai-interview",
         },
+        stockFlow: {
+          name: "StockFlow",
+          description:
+            "Sistema de gestión de inventario Fullstack con arquitectura desacoplada. Construido con una API REST robusta en .NET 10 (C#) y un frontend moderno y escalable en React/Next.js. Implementa autenticación segura mediante JWT, Entity Framework Core para la base de datos y despliegue en la nube (Vercel y Render).",
+          tags: [".NET 10", "C#", "React", "JWT", "Tailwind"],
+          demoLabel: "Ver Demo",
+          demoUrl: "https://stockflow-client-snowy.vercel.app",
+          githubLabel: "Código Fuente",
+          githubUrl: "https://github.com/Lucho8/stockflow-api",
+        },
       },
     },
     footer: { madeWith: "Creado con Next.js, Tailwind v4 y mucho café." },
@@ -158,6 +177,16 @@ const translations: Record<Language, Dictionary> = {
           demoUrl: "https://ai-interview-delta-two.vercel.app/",
           githubLabel: "Source Code",
           githubUrl: "https://github.com/Lucho8/ai-interview",
+        },
+        stockFlow: {
+          name: "StockFlow",
+          description:
+            "Fullstack inventory management system with a decoupled architecture. Built with a robust REST API in .NET 10 (C#) and a modern, scalable React/Next.js frontend. Implements secure JWT authentication, Entity Framework Core for database management, and cloud deployment (Vercel and Render).",
+          tags: [".NET 10", "C#", "React", "JWT", "Tailwind"],
+          demoLabel: "Live Demo",
+          demoUrl: "https://stockflow-client-snowy.vercel.app",
+          githubLabel: "Source Code",
+          githubUrl: "https://github.com/Lucho8/stockflow-api",
         },
       },
     },

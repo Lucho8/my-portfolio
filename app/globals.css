@@ -5,57 +5,93 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  /* Fuente que viene con el preset Nova (Geist) */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 
-  /* Nuestra Paleta Minimalista (Modo Oscuro Fijo por ahora) */
   --color-background: var(--color-zinc-950);
   --color-foreground: var(--color-zinc-50);
-
   --color-card: var(--color-zinc-900);
   --color-card-foreground: var(--color-zinc-50);
-
   --color-popover: var(--color-zinc-950);
   --color-popover-foreground: var(--color-zinc-50);
-
   --color-primary: var(--color-zinc-50);
   --color-primary-foreground: var(--color-zinc-900);
-
   --color-secondary: var(--color-zinc-800);
   --color-secondary-foreground: var(--color-zinc-50);
-
   --color-muted: var(--color-zinc-900);
   --color-muted-foreground: var(--color-zinc-400);
-
   --color-accent: var(--color-zinc-800);
   --color-accent-foreground: var(--color-zinc-50);
-
   --color-destructive: var(--color-red-900);
   --color-destructive-foreground: var(--color-zinc-50);
-
   --color-border: var(--color-zinc-800);
   --color-input: var(--color-zinc-800);
   --color-ring: var(--color-zinc-300);
-
   --radius-lg: var(--radius);
   --radius-md: calc(var(--radius) - 2px);
   --radius-sm: calc(var(--radius) - 4px);
 }
 
-/* Configuraciones Base */
 :root {
   --radius: 0.5rem;
 }
 
-/* Forzamos el modo oscuro en el body para que nuestra app sea oscura por defecto */
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50%       { background-position: 100% 50%; }
+}
+
+@keyframes cursor-blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+@keyframes float-orb {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33%       { transform: translate(28px, -18px) scale(1.06); }
+  66%       { transform: translate(-18px, 12px) scale(0.94); }
+}
+
 @layer base {
-  * {
-    @apply border-border;
-  }
+  * { @apply border-border; }
   body {
     @apply bg-background text-foreground antialiased;
-    /* Esto hace que el scroll en la página entera sea suave, útil para nuestro One-Page */
     scroll-behavior: smooth;
+  }
+  ::selection {
+    background: rgba(34, 211, 238, 0.22);
+    color: #e4e4e7;
+  }
+}
+
+@layer utilities {
+  .text-gradient-cyan {
+    background: linear-gradient(135deg, #22d3ee 0%, #34d399 50%, #22d3ee 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradient-shift 4s ease infinite;
+  }
+
+  .cursor-blink {
+    animation: cursor-blink 1s step-end infinite;
+  }
+
+  .orb-animate {
+    animation: float-orb 10s ease-in-out infinite;
+  }
+
+  .card-glow-cyan:hover {
+    box-shadow: 0 0 0 1px rgba(34,211,238,0.2), 0 8px 40px -8px rgba(34,211,238,0.2);
+  }
+  .card-glow-violet:hover {
+    box-shadow: 0 0 0 1px rgba(167,139,250,0.2), 0 8px 40px -8px rgba(167,139,250,0.2);
+  }
+  .card-glow-emerald:hover {
+    box-shadow: 0 0 0 1px rgba(52,211,153,0.2), 0 8px 40px -8px rgba(52,211,153,0.2);
+  }
+  .card-glow-orange:hover {
+    box-shadow: 0 0 0 1px rgba(251,146,60,0.2), 0 8px 40px -8px rgba(251,146,60,0.2);
   }
 }

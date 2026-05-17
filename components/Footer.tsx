@@ -1,51 +1,43 @@
 "use client";
 
 import { useLanguage } from "@/app/context/LanguageContext";
-import { Terminal, Briefcase, Mail } from "lucide-react";
+import { Terminal, Briefcase } from "lucide-react";
 
 export function Footer() {
   const { t } = useLanguage();
 
   return (
-    <footer id="contact" className="border-t border-border/40 py-12 mt-10">
-      <div className="container mx-auto px-4 md:px-8 max-w-5xl flex flex-col items-center justify-center gap-6">
-        <div className="flex items-center gap-6">
+    <footer className="border-t border-zinc-800/40 py-5">
+      <div className="container mx-auto px-4 md:px-8 max-w-6xl flex flex-col sm:flex-row items-center justify-between gap-3">
+
+        {/* Copyright */}
+        <p className="font-mono text-xs text-zinc-600">
+          © {new Date().getFullYear()} Luciano Fredes
+          <span className="mx-2 text-zinc-800">·</span>
+          {t.footer.madeWith}
+        </p>
+
+        {/* Quick links */}
+        <div className="flex items-center gap-4">
           <a
             href="https://github.com/Lucho8"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-muted-foreground hover:text-foreground transition-colors p-2"
+            className="flex items-center gap-1.5 font-mono text-xs text-zinc-600 transition-colors duration-200 hover:text-cyan-400"
           >
-            <span className="sr-only">GitHub</span>
-            <Terminal className="h-6 w-6" />
+            <Terminal className="h-3.5 w-3.5" />
+            GitHub
           </a>
-
           <a
             href="https://www.linkedin.com/in/luciano-gonzalo-fredes-96b786192/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-muted-foreground hover:text-foreground transition-colors p-2"
+            className="flex items-center gap-1.5 font-mono text-xs text-zinc-600 transition-colors duration-200 hover:text-violet-400"
           >
-            <span className="sr-only">LinkedIn</span>
-            <Briefcase className="h-6 w-6" />
-          </a>
-
-          <a
-            href="mailto:lucianogonzalofredes@gmail.com"
-            className="text-muted-foreground hover:text-foreground transition-colors p-2 flex items-center gap-2"
-          >
-            <Mail className="h-6 w-6" />
-            {/* Mostrar el correo de forma visible y clara */}
-            <span className="hidden sm:inline">
-              lucianogonzalofredes@gmail.com
-            </span>
-            <span className="sr-only">Email</span>
+            <Briefcase className="h-3.5 w-3.5" />
+            LinkedIn
           </a>
         </div>
-
-        <p className="text-sm text-muted-foreground text-center">
-          &copy; {new Date().getFullYear()} Luciano Fredes. {t.footer.madeWith}
-        </p>
       </div>
     </footer>
   );

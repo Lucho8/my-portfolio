@@ -15,12 +15,7 @@ import {
   Briefcase,
 } from "lucide-react";
 
-// ─── Formspree setup ─────────────────────────────────────────────────────────
-// 1. Creá una cuenta gratis en https://formspree.io
-// 2. New Form → dale un nombre → te dan un ID (ej: "xabcd123")
-// 3. Reemplazá "YOUR_FORM_ID" con ese ID
-// Free tier: 50 envíos/mes, sin tarjeta, sin backend.
-// ─────────────────────────────────────────────────────────────────────────────
+
 const FORMSPREE_URL = "https://formspree.io/f/xykvgpaw";
 
 type Status = "idle" | "loading" | "success" | "error";
@@ -93,7 +88,7 @@ export function Contact() {
   return (
     <section id="contact" className="py-24">
       <div className="container mx-auto px-4 md:px-8 max-w-6xl">
-        {/* Section header */}
+       
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -113,9 +108,9 @@ export function Contact() {
           <div className="mt-4 h-px w-28 bg-linear-to-r from-cyan-500 via-emerald-400 to-transparent" />
         </motion.div>
 
-        {/* Two-column layout */}
+     
         <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-[1fr_1.4fr]">
-          {/* LEFT — info */}
+         
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -154,7 +149,7 @@ export function Contact() {
             </div>
           </motion.div>
 
-          {/* RIGHT — form */}
+       
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -166,7 +161,7 @@ export function Contact() {
 
             <div className="p-6 md:p-8">
               <AnimatePresence mode="wait">
-                {/* SUCCESS */}
+         
                 {status === "success" && (
                   <motion.div
                     key="success"
@@ -195,7 +190,7 @@ export function Contact() {
                   </motion.div>
                 )}
 
-                {/* FORM */}
+       
                 {status !== "success" && (
                   <motion.form
                     key="form"
@@ -205,7 +200,7 @@ export function Contact() {
                     exit={{ opacity: 0 }}
                     className="flex flex-col gap-5"
                   >
-                    {/* Error banner */}
+                   
                     <AnimatePresence>
                       {status === "error" && (
                         <motion.div
@@ -222,7 +217,7 @@ export function Contact() {
                       )}
                     </AnimatePresence>
 
-                    {/* Name */}
+                 
                     <div className="flex flex-col gap-1.5">
                       <label className="text-xs font-medium uppercase tracking-wider text-zinc-500">
                         {t.contact.nameLabel}{" "}
@@ -240,7 +235,7 @@ export function Contact() {
                       />
                     </div>
 
-                    {/* Email */}
+                   
                     <div className="flex flex-col gap-1.5">
                       <label className="text-xs font-medium uppercase tracking-wider text-zinc-500">
                         {t.contact.emailLabel}{" "}
@@ -258,7 +253,7 @@ export function Contact() {
                       />
                     </div>
 
-                    {/* Message */}
+                  
                     <div className="flex flex-col gap-1.5">
                       <label className="text-xs font-medium uppercase tracking-wider text-zinc-500">
                         {t.contact.messageLabel}{" "}
@@ -276,7 +271,7 @@ export function Contact() {
                       />
                     </div>
 
-                    {/* Submit */}
+                    
                     <button
                       type="submit"
                       disabled={status === "loading"}

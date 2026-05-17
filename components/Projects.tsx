@@ -4,7 +4,7 @@ import { useLanguage } from "@/app/context/LanguageContext";
 import { ExternalLink, Code } from "lucide-react";
 import { motion } from "framer-motion";
 
-// Each project gets its own color accent
+
 const PROJECT_ACCENTS = [
   {
     gradient:  "from-cyan-500 to-blue-500",
@@ -44,7 +44,7 @@ export function Projects() {
     <section id="projects" className="py-24">
       <div className="container mx-auto px-4 md:px-8 max-w-5xl">
 
-        {/* Section header */}
+ 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -65,7 +65,7 @@ export function Projects() {
           <div className="mt-4 h-px w-28 bg-linear-to-r from-cyan-500 via-emerald-400 to-transparent" />
         </motion.div>
 
-        {/* Project grid */}
+   
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {projectsArray.map(([projectKey, project], index) => {
             const accent = PROJECT_ACCENTS[index % PROJECT_ACCENTS.length];
@@ -78,10 +78,10 @@ export function Projects() {
                 transition={{ duration: 0.5, delay: index * 0.08 }}
                 className={`group relative flex flex-col rounded-xl border border-zinc-800 bg-zinc-900/60 backdrop-blur-sm overflow-hidden transition-all duration-300 ${accent.glow} hover:-translate-y-1.5`}
               >
-                {/* Colored top bar */}
+           
                 <div className={`h-0.75 w-full bg-linear-to-r ${accent.gradient} shrink-0`} />
 
-                {/* Card top: title + number */}
+            
                 <div className="flex items-start justify-between px-5 pt-5 pb-2">
                   <h3 className="text-base font-bold text-zinc-200 group-hover:text-white transition-colors duration-200">
                     {project.name}
@@ -91,12 +91,12 @@ export function Projects() {
                   </span>
                 </div>
 
-                {/* Description */}
+         
                 <p className="flex-1 px-5 pb-4 text-sm leading-relaxed text-zinc-400">
                   {project.description}
                 </p>
 
-                {/* Tags */}
+        
                 <div className="px-5 pb-4 flex flex-wrap gap-1.5">
                   {project.tags.map((tag, tagIndex) => (
                     <span
@@ -108,7 +108,7 @@ export function Projects() {
                   ))}
                 </div>
 
-                {/* Actions footer */}
+   
                 <div className="flex items-center gap-2.5 border-t border-zinc-800/80 bg-zinc-950/40 px-5 py-3">
                   <a
                     href={project.demoUrl}

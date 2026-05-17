@@ -20,12 +20,12 @@ export function Navbar() {
       transition={{ duration: 0.5, ease: "easeOut" }}
       className="sticky top-0 z-50 w-full border-b border-zinc-800/50 bg-zinc-950/80 backdrop-blur-xl"
     >
-      {/* Gradient shimmer on bottom border */}
+    
       <div className="absolute inset-x-0 bottom-0 h-px bg-linear-to-r from-transparent via-cyan-500/25 to-transparent" />
 
       <div className="container mx-auto flex h-16 max-w-5xl items-center justify-between px-4 md:px-8">
 
-        {/* Logo */}
+    
         <a
           href="#about"
           className="group flex items-center font-mono text-lg font-bold tracking-tight"
@@ -36,10 +36,10 @@ export function Navbar() {
           <span className="text-zinc-600 transition-colors duration-200 group-hover:text-zinc-400">.dev</span>
         </a>
 
-        {/* Right side */}
+
         <div className="flex items-center gap-5">
 
-          {/* Nav links — hidden on mobile */}
+   
           <div className="hidden md:flex items-center gap-6">
             {navLinks.map(({ label, href }) => (
               <a
@@ -52,7 +52,6 @@ export function Navbar() {
             ))}
           </div>
 
-          {/* Language toggle */}
           <button
             onClick={toggleLanguage}
             className="inline-flex cursor-pointer items-center gap-1.5 rounded-md border border-zinc-800 bg-zinc-900/80 px-3 py-1.5 font-mono text-xs font-medium text-zinc-500 transition-all duration-200 hover:border-cyan-500/40 hover:bg-cyan-950/30 hover:text-cyan-400"

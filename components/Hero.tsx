@@ -29,7 +29,7 @@ function TerminalCard() {
       <div className="relative rounded-xl border border-zinc-800 bg-zinc-900/90 backdrop-blur-sm overflow-hidden shadow-2xl shadow-black/50">
         <div className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-cyan-500/40 to-transparent" />
 
-        {/* Title bar */}
+      
         <div className="flex items-center gap-2 border-b border-zinc-800/80 bg-zinc-950/60 px-4 py-2.5">
           <div className="flex gap-1.5">
             <div className="h-2.5 w-2.5 rounded-full bg-red-500/70" />
@@ -39,7 +39,7 @@ function TerminalCard() {
           <span className="ml-2 font-mono text-xs text-zinc-600">~/dev.json</span>
         </div>
 
-        {/* JSON */}
+    
         <div className="p-5 font-mono text-sm leading-7">
           <div className="text-zinc-600">{"{"}</div>
           {JSON_LINES.map(({ key, value, color }, i) => (
@@ -53,7 +53,7 @@ function TerminalCard() {
           <div className="text-zinc-600">{"}"}</div>
         </div>
 
-        {/* Stats */}
+    
         <div className="grid grid-cols-3 border-t border-zinc-800/60 bg-zinc-950/40">
           {[
             { label: "Proyectos", value: "4"      },
@@ -71,7 +71,7 @@ function TerminalCard() {
         </div>
       </div>
 
-      {/* Open to work badge */}
+
       <motion.div
         initial={{ opacity: 0, y: 8 }}
         animate={{ opacity: 1, y: 0 }}
@@ -104,7 +104,7 @@ export function Hero() {
       id="about"
       className="relative flex min-h-[92vh] items-center justify-center overflow-hidden pt-16"
     >
-      {/* Ambient orbs */}
+
       <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
         <div
           className="orb-animate absolute -top-24 left-1/4 h-130 w-130 rounded-full"
@@ -123,10 +123,10 @@ export function Hero() {
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_80%_60%_at_50%_50%,transparent_40%,rgba(9,9,11,0.85)_100%)]" />
 
       <div className="container w-full px-4 md:px-8 max-w-6xl">
-        {/* Grid: 1 col mobile, 2 col desktop */}
+     
         <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[1fr_400px]">
 
-          {/* LEFT */}
+        
           <div className="flex flex-col">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -223,7 +223,7 @@ export function Hero() {
             </motion.div>
           </div>
 
-          {/* RIGHT — Terminal card (desktop only) */}
+      
           <TerminalCard />
         </div>
       </div>

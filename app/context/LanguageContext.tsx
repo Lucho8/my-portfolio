@@ -16,6 +16,7 @@ interface Dictionary {
     description: string;
     stack: string;
     cta: string;
+    cvLabel: string;   
   };
   projects: {
     sectionTitle: string;
@@ -72,6 +73,7 @@ const translations: Record<Language, Dictionary> = {
         "Ingeniero Fullstack especializado en ecosistemas React y Arquitecturas Escalables. Me dedico a desarrollar plataformas completas, seguras y orientadas al usuario. Mi enfoque principal está en el Frontend con Next.js y TypeScript, creando interfaces modulares respaldadas por integraciones backend robustas y bases de datos relacionales. Construyo software pensando tanto en la experiencia del cliente como en la lógica del negocio, asegurándome de que cada despliegue esté listo para producción.",
       stack: "🛠️ Core Stack: Next.js | TypeScript | React | Tailwind CSS | PostgreSQL | Prisma",
       cta: "Ver Proyectos",
+      cvLabel: "Descargar CV",
     },
     projects: {
       sectionTitle: "Proyectos Destacados",
@@ -141,6 +143,7 @@ const translations: Record<Language, Dictionary> = {
         "Fullstack Engineer specializing in React ecosystems and Scalable Architectures. I am dedicated to developing complete, secure, and user-oriented platforms. My main focus is on Frontend development with Next.js and TypeScript, creating modular interfaces backed by robust backend integrations and relational databases. I build software with both the customer experience and business logic in mind, ensuring every deployment is production-ready.",
       stack: "🛠️ Core Stack: Next.js | TypeScript | React | Tailwind CSS | PostgreSQL | Prisma",
       cta: "View Projects",
+      cvLabel: "Download CV",
     },
     projects: {
       sectionTitle: "Featured Projects",
@@ -221,6 +224,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
 
 export function useLanguage() {
   const context = useContext(LanguageContext);
-  if (context === undefined) throw new Error("useLanguage must be used within a LanguageProvider");
+  if (context === undefined)
+    throw new Error("useLanguage must be used within a LanguageProvider");
   return context;
 }
